@@ -4,8 +4,17 @@
         "Parameter": [
             {
                 "Name": "max-cpu-cores",
-                "Value": "2"
+                "Value": "6"
             }
         ]
-    }
+    },
+    {
+    "ResourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "Parameter": [
+      {
+        "Name": "max-vss-cpu-cores",
+        "Value": "3"
+      }
+    ]
+  }
 ]
