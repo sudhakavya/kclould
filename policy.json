@@ -1,1 +1,166 @@
+{
+  "if": {
+    "anyOf": [
+      {
+        "not": {
+          "anyOf": [
+            {
+              "field": "type",
+              "like": "Microsoft.Compute/virtualMachines"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Compute/virtualMachineScaleSets"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Compute/disks"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Storage/storageAccounts"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Network/networkInterfaces"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Network/networkSecurityGroups"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Network/publicIPAddresses"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Network/virtualNetworks"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.DocumentDB/databaseAccounts"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Web/serverFarms"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Web/sites"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Sql/servers"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Sql/servers/databases"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.DataFactory/datafactories"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.DataLakeAnalytics/accounts"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.DataLakeStore/accounts"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Synapse/workspaces"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Databricks/workspaces"
+            },
+            {
+              "field": "type",
+              "like": "Microsoft.Logic"
+            }       
+            {
+              "field": "type",
+              "in": [ "Microsoft.Logic", "Microsoft.Databricks/workspaces", "Microsoft.Synapse/workspaces", "Microsoft.DataLakeStore/accounts", "Microsoft.DataLakeAnalytics/accounts", "Microsoft.DataFactory/datafactories", "Microsoft.Sql/servers/databases", "Microsoft.Sql/servers", "Microsoft.Web/sites", "Microsoft.Web/serverFarms", "Microsoft.DocumentDB/databaseAccounts", "Microsoft.Network/virtualNetworks", "Microsoft.Network/publicIPAddresses", "Microsoft.Network/networkSecurityGroups", "Microsoft.Compute/virtualMachines", "Microsoft.Compute/virtualMachineScaleSets", "Microsoft.Compute/disks", "Microsoft.Storage/storageAccounts", "Microsoft.Network/networkInterfaces" ]
+            }
+          ]
+        }
+      },
+      {
+        "allof": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/disks"
+          },
+          {
+            "not": {
+              "field": "Microsoft.Compute/disks/Sku.Tier",
+              "in": [ "standard" ]
+            }
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Storage/storageAccounts"
+          },
+          {
+            "not": {
+              "field": "Microsoft.Storage/storageAccounts/sku.name",
+              "in": [ "Standard_LRS" ]
+            }
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/virtualMachines"
+          },
+          {
+            "not": {
+                  "field": "Microsoft.Compute/virtualMachines/sku.name",
+                  "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
+            }
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Compute/virtualMachineScaleSets"
+          },
+          {
+            "not": {
+                  "field": "Microsoft.Compute/virtualMachineScaleSets/sku.name",
+                  "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
+            }
+          }
+        ]
+      },
+      {
+        "allof": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Web/serverfarms"
+          },
+          {
+            "not": {
+              "field": "Microsoft.Web/serverfarms/sku.name",
+              "in": [ "Y1" ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
 
