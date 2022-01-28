@@ -79,7 +79,7 @@
             {
               "field": "type",
               "like": "Microsoft.Logic"
-            }       
+            },
             {
               "field": "type",
               "in": [ "Microsoft.Logic", "Microsoft.Databricks/workspaces", "Microsoft.Synapse/workspaces", "Microsoft.DataLakeStore/accounts", "Microsoft.DataLakeAnalytics/accounts", "Microsoft.DataFactory/datafactories", "Microsoft.Sql/servers/databases", "Microsoft.Sql/servers", "Microsoft.Web/sites", "Microsoft.Web/serverFarms", "Microsoft.DocumentDB/databaseAccounts", "Microsoft.Network/virtualNetworks", "Microsoft.Network/publicIPAddresses", "Microsoft.Network/networkSecurityGroups", "Microsoft.Compute/virtualMachines", "Microsoft.Compute/virtualMachineScaleSets", "Microsoft.Compute/disks", "Microsoft.Storage/storageAccounts", "Microsoft.Network/networkInterfaces" ]
@@ -123,8 +123,8 @@
           },
           {
             "not": {
-                  "field": "Microsoft.Compute/virtualMachines/sku.name",
-                  "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
+              "field": "Microsoft.Compute/virtualMachines/sku.name",
+              "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
             }
           }
         ]
@@ -137,22 +137,8 @@
           },
           {
             "not": {
-                  "field": "Microsoft.Compute/virtualMachineScaleSets/sku.name",
-                  "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
-            }
-          }
-        ]
-      },
-      {
-        "allof": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Web/serverfarms"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Web/serverfarms/sku.name",
-              "in": [ "Y1" ]
+              "field": "Microsoft.Compute/virtualMachineScaleSets/sku.name",
+              "in": [ "Standard_D2s_v3", "Standard_B2s", "Standard_B1s", "Standard_DS1_v2s" ]
             }
           }
         ]
