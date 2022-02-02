@@ -16,8 +16,32 @@
             "equals": "Microsoft.ContainerService/managedClusters"
           }
         ]
-      }  
-     ]
+      }
+      {
+            "allOf": [
+              {
+                "field": "type",
+                "equals": "Microsoft.ContainerService/managedClusters/agentPools"
+              },
+              {
+                "not": {
+                  "allOf": [
+                    {
+                      "field": "Microsoft.ContainerService/managedClusters/agentPools",
+                      "in": [
+                        "Standard_D3_v2",                       
+                        "Standard_B2s",
+                        
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+     
+
+]
   },
   "then": {
     "effect": "deny"
