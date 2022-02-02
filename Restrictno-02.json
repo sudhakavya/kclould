@@ -1,1 +1,25 @@
-
+{
+  "if": {
+    "anyOf": [
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ContainerService/managedClusters/agentPools"
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.ContainerService/managedClusters"
+          }
+        ]
+      }  
+     ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
