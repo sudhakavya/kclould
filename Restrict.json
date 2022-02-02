@@ -5,7 +5,7 @@
         "allOf": [
           {
             "field": "type",
-            "equals": "Microsoft.Kubernetes/register"
+            "equals": "Microsoft.ContainerService/managedClusters/agentPools"
           }
         ]
       },
@@ -13,16 +13,13 @@
         "allOf": [
           {
             "field": "type",
-            "equals": "Microsoft.KubernetesConfiguration/register"
+            "equals": "Microsoft.ContainerService/managedClusters"
           }
         ]
-      }
+      }  
      ]
   },
   "then": {
     "effect": "deny"
   }
 }
-      
-  
-
