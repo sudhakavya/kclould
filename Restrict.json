@@ -1,1 +1,23 @@
-
+{
+  "if": {
+    "anyOf": [
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Kubernetes/register"
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.KubernetesConfiguration/register"
+          }
+        ]
+      },
+  "then": {
+    "effect": "deny"
+  }
+}
