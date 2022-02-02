@@ -16,8 +16,13 @@
             "equals": "Microsoft.KubernetesConfiguration/register"
           }
         ]
-      },
+      }
+     ]
+  },
   "then": {
     "effect": "deny"
   }
 }
+      
+  
+
