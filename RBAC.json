@@ -1,1 +1,52 @@
-HI
+{
+  "Name": "KodeKloud-Rbac",
+  "Id": null,
+  "IsCustom": true,
+  "Description": "KodeKloud-Rbac",
+  "Actions": [
+    "Microsoft.Resources/deployments/*",
+    "Microsoft.Resources/deployments/validate/action",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Network/networkSecurityGroups/write",
+    "Microsoft.Network/networkSecurityGroups/read",
+    "Microsoft.Network/networkSecurityGroups/join/action",
+    "Microsoft.Compute/virtualMachines/write",
+    "Microsoft.Compute/virtualMachines/read",
+    "Microsoft.Network/networkInterfaces/write",
+    "Microsoft.Network/networkInterfaces/read",
+    "Microsoft.Network/networkInterfaces/join/action",
+    "Microsoft.Network/publicIPAddresses/write",
+    "Microsoft.Network/publicIPAddresses/read",
+    "Microsoft.Network/publicIPAddresses/join/action",
+    "Microsoft.Compute/disks/*",
+    "Microsoft.Network/virtualNetworks/write",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/subnets/join/action",
+    "Microsoft.Storage/storageAccounts/write",
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Compute/virtualMachineScaleSets/read",
+    "Microsoft.Compute/virtualMachineScaleSets/write",
+    
+    
+    
+    
+    
+    
+    
+    "Microsoft.Compute/availabilitySets/read",
+    "Microsoft.Compute/availabilitySets/write",
+    "Microsoft.Compute/proximityPlacementGroups/read",
+    "Microsoft.Compute/proximityPlacementGroups/write",
+    
+    
+   
+    "Microsoft.Network/publicIPAddresses/delete",
+    "Microsoft.Network/loadBalancers/*",
+    
+    
+    
+  ],
+  "NotActions": [
+    ]
+}
