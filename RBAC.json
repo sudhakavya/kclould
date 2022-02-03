@@ -22,30 +22,35 @@
     "Microsoft.Compute/disks/*",
     "Microsoft.Network/virtualNetworks/write",
     "Microsoft.Network/virtualNetworks/read",
-    "Microsoft.Network/virtualNetworks/subnets/join/action",
+    "Microsoft.Network/virtualNetworks/join/action",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Network/virtualNetworks/subnets/write",
     "Microsoft.Storage/storageAccounts/write",
     "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Storage/storageAccounts/fileservices/write",
+    "Microsoft.Storage/storageAccounts/blobServices/write",
+    "Microsoft.Storage/storageAccounts/fileservices/read",
+    "Microsoft.Storage/storageAccounts/blobServices/read",
     "Microsoft.Compute/virtualMachineScaleSets/read",
     "Microsoft.Compute/virtualMachineScaleSets/write",
-    
-    
-    
-    
-    
-    
-    
-    "Microsoft.Compute/availabilitySets/read",
-    "Microsoft.Compute/availabilitySets/write",
-    "Microsoft.Compute/proximityPlacementGroups/read",
-    "Microsoft.Compute/proximityPlacementGroups/write",
-    
-    
-   
-    "Microsoft.Network/publicIPAddresses/delete",
-    "Microsoft.Network/loadBalancers/*",
-    
-    
-    
+    "Microsoft.ContainerService/managedClusters/*",
+    "Microsoft.ContainerService/managedClusters/read",
+    "Microsoft.Web/serverFarms/*",
+    "Microsoft.Web/sites/*",
+    "Microsoft.DocumentDB/databaseAccounts/*",
+    "Microsoft.Sql/servers/*",
+    "Microsoft.Sql/servers/databases/*",
+    "Microsoft.DevTestLab/labs/write",
+    "Microsoft.DevTestLab/labs/read",
+    "Microsoft.DevTestLab/labCenters/write",
+    "Microsoft.DevTestLab/labCenters/read",
+    "Microsoft.Logic/integrationAccounts/*",
+    "Microsoft.DataFactory/datafactories/*",
+    "Microsoft.DataLakeStore/accounts/*",
+    "Microsoft.DataLakeAnalytics/accounts/*",
+    "Microsoft.Synapse/workspaces/*",
+    "Microsoft.Databricks/workspaces/write",
+    "Microsoft.Databricks/workspaces/read"
   ],
   "NotActions": [
     ]
